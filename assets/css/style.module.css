@@ -7,7 +7,7 @@
     --hue-color:242;
 
     /*HSL Color Mode */
-    --skin-color: hsl(342, 92%, 46%);
+    --skin-color: hsl(296, 40%, 34%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
     --body-color: hsl(var(--hue-color), 19%, 5%);
@@ -113,7 +113,15 @@ input {
 }
 
 /*===============LAYOUT================*/
+.container {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.grid {
+    display: grid;
+}
 
 /*=====================REUSABLE CSS CLASSES =============*/
 
@@ -165,15 +173,81 @@ input {
 }
 
 .nav__link {
+    float: right;
     height: 100%;
     line-height: 100px;
     padding: 0 1rem;
     color: var(--title-color);
     font-weight: var(--font-medium);
     position: relative;
+    transition: .4s;
+}
+
+.btn__share {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    
+}
+
+.social__share {
+    font-size: 1.5rem;
+}
+
+/* Active Link*/
+.nav__link.active-link, .nav__link:hover{
+    color: var(--skin-color);
+}
+
+.nav__link.active-link::after, .nav__link:hover::after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: var(--skin-color);
+    border-radius: 50%;
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 /*===========MAIN =================*/
-
+.main {
+    margin-left: 100px;
+}
 /*================ Home Section ============*/
+.home{
+    background: url('../img/');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.home__container {
+    position: relative;
+    height: 100%;
+    align-items: center;
+}
+
+.home__social{
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 3.5rem;
+}
+
+.home__social-follow {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+}
+
+.home__img{
+    display: none;
+}
 
 /*============== Buttons =============*/

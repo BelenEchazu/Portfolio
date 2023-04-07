@@ -62,7 +62,7 @@ const tabs = document.querySelectorAll('[data-target]'),
     /*========== SERVICES MODAL ========*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modelBtns = document.querySelectorAll('.services__button'),
-      modalCloses = document.querySelectorAll('.services__modal-close'),
+      modalCloses = document.querySelectorAll('.services__modal-close');
 
 let modal = function(modalClick) {
     modalViews[modalClick].classList.add('active-modal')
@@ -80,4 +80,24 @@ modalCloses.forEach((modalClose) =>{
             modalView.classList.remove ('active-modal')
         })
     })
+})
+
+/*=======INPUT ANIMATION=====*/
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if(this.value == "") {
+        parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("focus", focusFunc)
+    input.addEventListener("blur", blurFunc)
 })

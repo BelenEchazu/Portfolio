@@ -1067,6 +1067,10 @@ textarea.input{
     font-size: 1.50rem;
 }
 
+.footer__social-link{
+    color: var(--skin-color);
+}
+
 .footer__social{
     font-size: 1.25rem;
     margin-right: var(--mb-1-5);

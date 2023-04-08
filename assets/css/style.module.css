@@ -853,7 +853,7 @@ input {
 }
 
 .services__modal-services{
-    display: flex;
+    display: ;
     align-items: center;
     column-gap: .5rem;
 }
@@ -864,6 +864,7 @@ input {
 }
 
 .services__modal-info {
+    display: contents;
     font-size: var(--small-font-size);
 }
 

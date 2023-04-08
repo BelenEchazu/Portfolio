@@ -163,6 +163,7 @@ function sendMail() {
         name: document.getElementById("Username").value,
         email: document.getElementById("Email").value,
         message: document.getElementById("message").value,
+        phone: document.getElementById("Phone").value,
     };
     const serviceID = "service_0q5qn14";
     const templateID = "template_uuo2sts";
@@ -173,6 +174,7 @@ function sendMail() {
             document.getElementById("Username").value = "";
             document.getElementById("Email").value = "";
             document.getElementById("message").value = "";
+            document.getElementById("Phone").value = "";
             console.log(res);
             alert("your message sent successsfully")
         }

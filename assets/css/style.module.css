@@ -350,6 +350,10 @@ input {
     font-size: var(--font-medium);
 }
 
+.cv{
+    color: var(--skin-color);
+}
+
 .info__title {
     font-weight: var(--font-medium);
 }

@@ -15,7 +15,7 @@
     <!--=======MAIN CSS===========-->
     <link rel="stylesheet" href="assets/css/style.module.css" />
 
-    <title>Responsive portfolio website - Crypticalcoder</title>
+    <title>BelenEchazu Portfolio</title>
   </head>
   <body>
     <!--=======SIDEBAR=======-->
@@ -459,7 +459,7 @@
                 Worked with the BackEnd team to render and provide Front End functionality.
                 Developed under SCRUM methodology using Jira Software as a tool. Git and GitFlow versioning system. </p>
               <ul class="details__info">
-                <li>Created - <span>February-March 2023</span></li>
+                <li>Created - <span>February|March 2023</span></li>
                 <li>Technologies - <span>HTML CSS CHAKRA UI JavaScript React Redux Claudynary Auth0 Node.js Sequelize Express</span></li>
                 <li>Role - <span>frontend</span></li>
                 <li>
@@ -480,7 +480,7 @@
               <h3 class="details__title">BeluPoke</h3>
               <p class="details__description">Design and develop an app that provides information about all Pokemon (obtained from an API), allows combined filters, sorting by different criteria and create new Pokemon.</p>
               <ul class="details__info">
-                <li>Created - <span>January-February 2023</span></li>
+                <li>Created - <span>January|February 2023</span></li>
                 <li>Technologies - <span>HTML CSS JavaScript React Node.js Sequelize Express</span></li>
                 <li>Role - <span>frontend</span></li>
                 <li>
@@ -505,7 +505,7 @@
               <h3 class="details__title">DB_pasteleria</h3>
               <p class="details__description">E-commerce </p>
               <ul class="details__info">
-                <li>Created - <span>fecha</span></li>
+                <li>Created - <span>April 2023</span></li>
                 <li>Technologies - <span>HTML CSS Bootstrap TypeScript React Redux Claudynary Auth0 Node.js Sequelize Express</span></li>
                 <li>Role - <span>frontend</span></li>
                 <li>
@@ -607,7 +607,7 @@
               <div class="contact__card">
                 <i class="uil uil-envelope-edit contact__card-icon"></i>
                 <h3 class="contact__card-title">Email</h3>
-                <span class="contact__card-data">user@gmail.com</span>
+                <span class="contact__card-data">belenechazu@outlook.com</span>
                 <span class="contact__button">
                   Write me
                   <i class="uil uil-arrow-right contact__button-icon"></i>
@@ -626,30 +626,39 @@
 
             </div>
           </div>
+          <script src="main.js"></script>
+          <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("RsRZThqx2WsRZM_5a");
+   })();
+</script>
 
           <div class="contect__content">
             <form action="" class="contact__form">
               <div class="input__container">
-                <input type="text" class="input"/>
+                <input type="text" class="input" id="Username"/>
                 <label for="">Username</label>
                 <span>Username</span>
               </div>
               <div class="input__container">
-                <input type="email" class="input"/>
+                <input type="email" class="input" id="Email"/>
                 <label for="">Email</label>
                 <span>Email</span>
               </div>
               <div class="input__container">
-                <input type="tel" class="input"/>
+                <input type="tel" class="input" id="Phone"/>
                 <label for="">Phone</label>
                 <span>Phone</span>
               </div>
               <div class="input__container textarea">
-                <textarea name="" id="" class="input"></textarea>
+                <textarea name="" id="message" class="input"></textarea>
                 <label for="">Message</label>
                 <span>Message</span>
               </div>
-              <button type="submit" class="button"><i class="uil uil-navgator button__icon"></i>
+              <button type="submit" class="button"onclick="sendMail()"><i class="uil uil-navgator button__icon"></i>
                 Send Message
               </button>
             </form>
@@ -662,19 +671,22 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">María Belén</h1>
+                    <h1 class="footer__title">María Belén <br> Echazú Higa</h1>
                     <span class="footer__subtitle">Frontend Developer</span>
                 </div>
 
                 <ul class="footer__links">
                     <li>
-                        <a href="services" class="footer__link">Services</a>
+                        <a href="#home" class="footer__link">Home</a>
                     </li>
                     <li>
-                        <a href="work" class="footer__link">Work</a>
+                        <a href="#work" class="footer__link">Work</a>
                     </li>
                     <li>
-                        <a href="conctact" class="footer__link">Contact</a>
+                        <a href="#services" class="footer__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
                     </li>
                 </ul>
                 <div class="footer__socials">
@@ -693,7 +705,7 @@
                 </div>
             </div>
 
-            <p class="footer__copy">&#169; Crypticalcoder. All rigth reserved</p>
+            <p class="footer__copy">&#169; Belu Echazu. All rigth reserved</p>
         </div>
        </footer>
     </main>

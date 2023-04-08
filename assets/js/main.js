@@ -155,3 +155,27 @@ function navHighlighter()
 }
 
 /*==============SHOW CROLL UP ===============*/
+
+//------ funcion send message ---------------//
+
+function sendMail() {
+    var params = {
+        name: document.getElementById("Username").value,
+        email: document.getElementById("Email").value,
+        message: document.getElementById("message").value,
+    };
+    const serviceID = "service_0q5qn14";
+    const templateID = "template_uuo2sts";
+    
+    emailjs.send(serviceID,templateID,params)
+    .then(
+        res =>{
+            document.getElementById("Username").value = "";
+            document.getElementById("Email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("your message sent successsfully")
+        }
+    )
+    .catch(err=>console.log(err));
+}
